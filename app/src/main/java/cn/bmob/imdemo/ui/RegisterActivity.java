@@ -75,6 +75,7 @@ public class RegisterActivity extends ParentWithNaviActivity {
                 if (e == null) {
                     EventBus.getDefault().post(new FinishEvent());
                     startActivity(MainActivity.class, null, true);
+                    finish();
                 } else {
                     if (e.getErrorCode() == BaseModel.CODE_NOT_EQUAL) {
                         et_password_again.setText("");

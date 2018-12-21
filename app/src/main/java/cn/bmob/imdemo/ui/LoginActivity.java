@@ -67,6 +67,7 @@ public class LoginActivity extends BaseActivity {
                 if (e == null) {
                     //登录成功
                     startActivity(MainActivity.class, null, true);
+                    finish();
                 } else {
                     toast(e.getMessage() + "(" + e.getErrorCode() + ")");
                 }
